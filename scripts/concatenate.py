@@ -67,6 +67,9 @@ def main():
         path = markdown_dir / file_name
         lines += _load_file(path)
         lines += ["\n\n"]
+    bib_file_defined = len(list(markdown_dir.glob("*.bib")))
+    if bib_file_defined:
+        lines += ["# Bibliography"]
     # Write lines to file.
     save_dir = Path(".") / "build"
     save_dir.mkdir(parents=True, exist_ok=True)
