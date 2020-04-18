@@ -1,0 +1,2 @@
+#!/bin/bash
+fswatch -0 -event $1/*.md | xargs -0 -n1 -I{} ./scripts/convert_and_open.sh $1
