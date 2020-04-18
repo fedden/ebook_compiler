@@ -22,6 +22,6 @@ pandoc build/$1.md $FIGURES      \
 # Open resultant pdf file.
 open output/$1.pdf
 # Print out that we updated the file.
-MARKDOWN_FILES=$(find $1 -name "*")
+MARKDOWN_FILES=$(find $1 -name "*.*")
 TEXT="detected changes to one of [$MARKDOWN_FILES], updated output/$1.pdf"
 echo ${TEXT//\\n/}

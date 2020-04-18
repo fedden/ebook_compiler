@@ -1,2 +1,2 @@
 #!/bin/bash
-fswatch -0 -event $1/* | xargs -0 -n1 -I{} ./scripts/convert_and_open.sh $1
+fswatch -0 -event $1/*.* | xargs -0 -n1 -I{} ./scripts/convert_and_open.sh $1
